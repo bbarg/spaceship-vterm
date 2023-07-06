@@ -51,6 +51,5 @@ spaceship_vterm() {
     --color "$SPACESHIP_VTERM_COLOR" \
     --prefix "$SPACESHIP_VTERM_PREFIX" \
     --suffix "$SPACESHIP_VTERM_SUFFIX" \
-    --symbol "$SPACESHIP_VTERM_SYMBOL" \
-    "$(_vterm_print_directory)"
+    "vterm$(_vterm_print_directory)"
 }
