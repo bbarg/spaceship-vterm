@@ -1,10 +1,10 @@
 <h1 align="center">
   😍 + 🚀
-  <br>Spaceship Section<br>
+  <br>spaceship vterm<br>
 </h1>
 
 <h4 align="center">
-  A <a href="https://template.com" target="_blank">Foobar</a> section for Spaceship prompt
+  A <a href="https://template.com" target="_blank">vterm</a> section for Spaceship prompt
 </h4>
 
 <p align="center">
@@ -31,7 +31,7 @@
   </a>
 </p>
 
-Current Foobar version, through foobar (`😍`).
+Current vterm version, through vterm (`😍`).
 
 ## Installing
 
@@ -113,30 +113,31 @@ source "~/.zsh/spaceship-section/spaceship-section.plugin.zsh"
 After installing, add the following line to your `.zshrc` in order to include Ember section in the prompt:
 
 ```zsh
-spaceship add foobar
+spaceship add vterm
 ```
 
 ## Options
 
-This section is shown only in directories within a foobar context.
+This section is shown only in directories within a vterm context.
 
 | Variable                   |              Default               | Meaning                              |
 | :------------------------- | :--------------------------------: | ------------------------------------ |
-| `SPACESHIP_FOOBAR_SHOW`   |               `true`               | Show current section                 |
-| `SPACESHIP_FOOBAR_PREFIX` | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before section                |
-| `SPACESHIP_FOOBAR_SUFFIX` | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after section                 |
-| `SPACESHIP_FOOBAR_SYMBOL` |               `😍·`                | Character to be shown before version |
-| `SPACESHIP_FOOBAR_COLOR`  |             `yellow`               | Color of section                     |
+| `SPACESHIP_VTERM_SHOW`     |               `true`               | Show current section                 |
+| `SPACESHIP_VTERM_PREFIX`   | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before section                |
+| `SPACESHIP_VTERM_SUFFIX`   | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after section                 |
 
 ## Contributing
 
 First, thanks for your interest in contributing!
 
-Contribute to this repo by submitting a pull request. Please use [conventional commits](https://www.conventionalcommits.org/), since this project adheres to [semver](https://semver.org/) and is automatically released via [semantic-release](https://github.com/semantic-release/semantic-release).
+Contribute to this repo by submitting a pull request. Please use [conventional
+commits](https://www.conventionalcommits.org/), since this project adheres to
+[semver](https://semver.org/) and is automatically released via
+[semantic-release](https://github.com/semantic-release/semantic-release).
 
 ## License
 
-MIT © [Name Surname](http://yourwebsite.com)
+MIT © [Ben Barg](https://ben.community)
 
 <!-- References -->
 
