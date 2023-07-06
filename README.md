@@ -110,7 +110,7 @@ source "~/.zsh/spaceship-vterm/spaceship-vterm.plugin.zsh"
 
 ## Usage
 
-After installing, add the following line to your `.zshrc` in order to include Ember vterm in the prompt:
+After installing, add the following line to your `.zshrc` in order to include vterm in the prompt:
 
 ```zsh
 spaceship add vterm

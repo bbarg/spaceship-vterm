@@ -30,7 +30,7 @@ _vterm_printf(){
     fi
 }
 _vterm_print_directory(){
-    vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
+    _vterm_printf "51;A$(whoami)@$(hostname):$(pwd)"
 }
 
 # Execute 
@@ -47,9 +47,10 @@ spaceship_vterm() {
 
   # Display vterm section
   # spaceship::section utility composes sections. Flags are optional
+  # TODO: this only works for zsh right now
   spaceship::section::v4 \
     --color "$SPACESHIP_VTERM_COLOR" \
     --prefix "$SPACESHIP_VTERM_PREFIX" \
     --suffix "$SPACESHIP_VTERM_SUFFIX" \
-    "vterm$(_vterm_print_directory)"
+    "%{$(_vterm_print_directory)%}"
 }
