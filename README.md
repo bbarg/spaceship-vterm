@@ -115,10 +115,11 @@ spaceship add vterm
 
 This vterm is shown only in directories within a vterm context.
 
-| Variable                   |              Default               | Meaning                              |
-| :------------------------- | :--------------------------------: | ------------------------------------ |
-| `SPACESHIP_VTERM_SHOW`     |               `true`               | Enable the plugin                    |
-| `SPACESHIP_VTERM_ASYNC`    |               `true`               | Evaluate asynchronously              |
+| Variable                   |  Default | Meaning                                          |
+| :------------------------- | :------: | ------------------------------------------------ |
+| `SPACESHIP_VTERM_ENABLE`   | `true`   | Enable the section                               |
+| `SPACESHIP_VTERM_SHOW`     | `false`  | Whether to show the string `vterm` in the prompt |
+| `SPACESHIP_VTERM_ASYNC`    | `true`   | Evaluate asynchronously                          |
 
 ## Contributing
 

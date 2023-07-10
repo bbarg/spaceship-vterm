@@ -8,9 +8,9 @@
 # Configuration
 # ------------------------------------------------------------------------------
 
-SPACESHIP_VTERM_ENABLED="${SPACESHIP_VTERM_ENABLED=true}"
-SPACESHIP_VTERM_ASYNC="${SPACESHIP_VTERM_ASYNC=true}"
 SPACESHIP_VTERM_SHOW="${SPACESHIP_VTERM_SHOW=true}"
+SPACESHIP_VTERM_ASYNC="${SPACESHIP_VTERM_ASYNC=true}"
+SPACESHIP_VTERM_DISPLAY="${SPACESHIP_VTERM_DISPLAY=false}"
 
 # ------------------------------------------------------------------------------
 # Section
@@ -35,17 +35,15 @@ _vterm_print_directory(){
 # Execute 
 # Otherwise this section won't be loaded.
 spaceship_vterm() {
-  # If SPACESHIP_VTERM_ENABLED is false, don't show vterm section
-  [[ $SPACESHIP_VTERM_ENABLED == false ]] && return
+  # If SPACESHIP_VTERM_SHOW is false, don't run vterm section
+  [[ $SPACESHIP_VTERM_SHOW == false ]] && return
   
   # There's no need to determine a context, since we want to do this in every
   # directory.
 
-  # TODO: eventually we may want to check the version of the emacs-libvterm package
-  # installed in emacs, but that's not necessary right now.
-
+  # Optionally display a version tag to confirm that the plugin is running
   version=''
-  if [[ $SPACESHIP_VTERM_SHOW ]]; then
+  if [[ $SPACESHIP_VTERM_DISPLAY == true ]]; then
       version='vterm'
   fi
   
