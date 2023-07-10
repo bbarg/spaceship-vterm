@@ -8,10 +8,9 @@
 # Configuration
 # ------------------------------------------------------------------------------
 
-SPACESHIP_VTERM_SHOW="${SPACESHIP_VTERM_SHOW=true}"
+SPACESHIP_VTERM_ENABLED="${SPACESHIP_VTERM_ENABLED=true}"
 SPACESHIP_VTERM_ASYNC="${SPACESHIP_VTERM_ASYNC=true}"
-SPACESHIP_VTERM_PREFIX="${SPACESHIP_VTERM_PREFIX="$SPACESHIP_PROMPT_DEFAULT_PREFIX"}"
-SPACESHIP_VTERM_SUFFIX="${SPACESHIP_VTERM_SUFFIX="$SPACESHIP_PROMPT_DEFAULT_SUFFIX"}"
+SPACESHIP_VTERM_SHOW="${SPACESHIP_VTERM_SHOW=true}"
 
 # ------------------------------------------------------------------------------
 # Section
@@ -36,21 +35,23 @@ _vterm_print_directory(){
 # Execute 
 # Otherwise this section won't be loaded.
 spaceship_vterm() {
-  # If SPACESHIP_VTERM_SHOW is false, don't show vterm section
-  [[ $SPACESHIP_VTERM_SHOW == false ]] && return
-
+  # If SPACESHIP_VTERM_ENABLED is false, don't show vterm section
+  [[ $SPACESHIP_VTERM_ENABLED == false ]] && return
+  
   # There's no need to determine a context, since we want to do this in every
   # directory.
 
   # TODO: eventually we may want to check the version of the emacs-libvterm package
   # installed in emacs, but that's not necessary right now.
 
-  # Display vterm section
-  # spaceship::section utility composes sections. Flags are optional
-  # TODO: this only works for zsh right now
+  version=''
+  if [[ $SPACESHIP_VTERM_SHOW ]]; then
+      version='vterm'
+  fi
+  
   spaceship::section::v4 \
     --color "$SPACESHIP_VTERM_COLOR" \
     --prefix "$SPACESHIP_VTERM_PREFIX" \
     --suffix "$SPACESHIP_VTERM_SUFFIX" \
-    "%{$(_vterm_print_directory)%}"
+    "$version%{$(_vterm_print_directory)%}"
 }

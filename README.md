@@ -4,34 +4,29 @@
 </h1>
 
 <h4 align="center">
-  A <a href="https://template.com" target="_blank">vterm</a> section for Spaceship prompt
+  A <a href="https://github.com/akermu/emacs-libvterm" target="_blank">vterm</a> section for Spaceship prompt
 </h4>
 
-<p align="center">
-  <a href="https://github.com/spaceship-prompt/spaceship-section/releases">
-    <img src="https://img.shields.io/github/v/release/spaceship-prompt/spaceship-section.svg?style=flat-square"
-      alt="GitHub Release" />
-  </a>
+<!-- <p align="center"> -->
+<!--   <a href="https://github.com/spaceship-prompt/spaceship-section/releases"> -->
+<!--     <img src="https://img.shields.io/github/v/release/spaceship-prompt/spaceship-section.svg?style=flat-square" -->
+<!--       alt="GitHub Release" /> -->
+<!--   </a> -->
 
-  <a href="https://github.com/spaceship-prompt/spaceship-section/actions">
-    <img src="https://img.shields.io/github/actions/workflow/status/spaceship-prompt/spaceship-gradle/ci.yaml?style=flat-square"
-      alt="GitHub Workflow Status" />
-  </a>
+<!--   <a href="https://github.com/spaceship-prompt/spaceship-section/actions"> -->
+<!--     <img src="https://img.shields.io/github/actions/workflow/status/spaceship-prompt/spaceship-gradle/ci.yaml?style=flat-square" -->
+<!--       alt="GitHub Workflow Status" /> -->
+<!--   </a> -->
+<!-- </p> -->
 
-  <a href="https://twitter.com/SpaceshipPrompt">
-    <img src="https://img.shields.io/badge/twitter-%40SpaceshipPrompt-00ACEE.svg?style=flat-square"
-      alt="Spaceship Twitter" />
-  </a>
+The [emacs-libvterm](https://github.com/akermu/emacs-libvterm) uses escape sequences to
+communicate information from the emulated shell back to emacs, and does so by modifing the
+shell's prompt. [spaceship](https://github.com/spaceship-prompt/spaceship-prompt)
+overrides the prompt with `$(spaceship::prompt)`, so a custom section is required to
+integrate `emacs-libvterm`.
 
-  <a href="https://discord.gg/NTQWz8Dyt9">
-    <img
-      src="https://img.shields.io/discord/859409950999707668?label=discord&logoColor=white&style=flat-square"
-      alt="Chat on Discord"
-    />
-  </a>
-</p>
-
-Current vterm version, through vterm (`😍`).
+This plugin uses the
+[spaceship-section](https://github.com/spaceship-prompt/spaceship-section) template.
 
 ## Installing
 
@@ -122,9 +117,8 @@ This vterm is shown only in directories within a vterm context.
 
 | Variable                   |              Default               | Meaning                              |
 | :------------------------- | :--------------------------------: | ------------------------------------ |
-| `SPACESHIP_VTERM_SHOW`     |               `true`               | Show current vterm                 |
-| `SPACESHIP_VTERM_PREFIX`   | `$SPACESHIP_PROMPT_DEFAULT_PREFIX` | Prefix before vterm                |
-| `SPACESHIP_VTERM_SUFFIX`   | `$SPACESHIP_PROMPT_DEFAULT_SUFFIX` | Suffix after vterm                 |
+| `SPACESHIP_VTERM_SHOW`     |               `true`               | Enable the plugin                    |
+| `SPACESHIP_VTERM_ASYNC`    |               `true`               | Evaluate asynchronously              |
 
 ## Contributing
 
@@ -134,6 +128,11 @@ Contribute to this repo by submitting a pull request. Please use [conventional
 commits](https://www.conventionalcommits.org/), since this project adheres to
 [semver](https://semver.org/) and is automatically released via
 [semantic-release](https://github.com/semantic-release/semantic-release).
+
+## Future Work
+
+- Support [message passing](https://github.com/akermu/emacs-libvterm#message-passing)
+- Functional tests
 
 ## License
 
